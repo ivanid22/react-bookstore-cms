@@ -4,7 +4,7 @@ A fully functional web-based CMS for a bookstore written in React with Redux.
 
 ## Live version
 
-- [Live version]()
+- [Live version](https://react-bookstore-cms.herokuapp.com/)
   
 ## Running the app locally
 You can always run the app through the live version linked on a previous section. But if you'd like to run it locally, follow the instructions below:
