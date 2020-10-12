@@ -1,41 +1,38 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 
-class BookList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const BookList = props => {
+  const { bookList } = props;
 
-  render () {
-    const { bookList } = this.props;
+  const renderBooks = () => {
+    bookList.map(book => (
+      <tr key={book.id}>
+        <Book book={book} />
+      </tr>
+    ));
+  };
 
-    const renderBooks = () => {
-      bookList.map(book => {
-        return (
-          <tr key={book.id}>
-            <Book book={book} />>
-          </tr>
-        )
-      });
-    }
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Book Id</th>
+          <th>Title</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {renderBooks}
+      </tbody>
+    </table>
+  );
+};
 
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th>Book Id</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {renderBooks}
-        </tbody>
-      </table>
-    );
-  }
-}
+BookList.propTypes = {
+  bookList: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 const mapStateToProps = state => (
   {
