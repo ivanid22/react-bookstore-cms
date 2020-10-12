@@ -8,9 +8,7 @@ const BookList = props => {
 
   const renderBooks = () => {
     bookList.map(book => (
-      <tr key={book.id}>
-        <Book book={book} />
-      </tr>
+      <Book key={book.id} book={book} />
     ));
   };
 
