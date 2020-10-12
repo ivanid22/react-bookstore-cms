@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
 const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -23,8 +24,8 @@ class BooksForm extends React.Component {
 
   onSubmit() {
     const { title, category } = this.state;
-    const { addBook } = this.props;
-    addBook({ title, category });
+    const { createBook } = this.props;
+    createBook({ title, category });
   }
 
   handleNameChange(event) {
@@ -56,12 +57,12 @@ class BooksForm extends React.Component {
 }
 
 BooksForm.propTypes = {
-  addBook: PropTypes.func.isRequired,
+  createBook: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
   addBook: bookData => {
-    dispatch(addBookAction(bookData));
+    dispatch(createBook(bookData));
   },
 });
 
