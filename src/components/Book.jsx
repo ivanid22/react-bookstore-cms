@@ -16,3 +16,5 @@ const Book = props => {
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.string).isRequired,
 };
+
+export default Book;
