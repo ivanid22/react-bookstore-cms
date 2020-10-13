@@ -20,9 +20,13 @@ class BooksForm extends React.Component {
       title: '',
       category: CATEGORIES[0],
     };
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.handleCategoryChange = this.handleCategoryChange.bind(this);
   }
 
-  onSubmit() {
+  onSubmit(event) {
+    event.preventDefault();
     const { title, category } = this.state;
     const { createBook } = this.props;
     createBook({ title, category });
@@ -43,13 +47,17 @@ class BooksForm extends React.Component {
   render() {
     const { category, title } = this.state;
     return (
-      <form onSubmit={this.submitBook}>
-        <label htmlFor="bookName">Book name</label>
-        <input type='text' id='bookName' value={title} onChange={this.handleNameChange} required />
-        <select id="bookCategoryId" name="bookCategory" value={category} onSelect={this.handleCategoryChange} required>
-          { renderCategories() }
-        </select>
-        <label htmlFor="bookCategory">Book category</label>
+      <form onSubmit={this.onSubmit}>
+        <label htmlFor="bookName">
+          Book name
+          <input type="text" id="bookName" value={title} onChange={this.handleNameChange} required />
+        </label>
+        <label htmlFor="bookCategory">
+          Book category
+          <select id="bookCategory" value={category} onChange={this.handleCategoryChange} required>
+            { renderCategories() }
+          </select>
+        </label>
         <input type="submit" />
       </form>
     );
@@ -61,7 +69,7 @@ BooksForm.propTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  addBook: bookData => {
+  createBook: bookData => {
     dispatch(createBook(bookData));
   },
 });

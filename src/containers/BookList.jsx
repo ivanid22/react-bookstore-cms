@@ -6,11 +6,9 @@ import Book from '../components/Book';
 const BookList = props => {
   const { bookList } = props;
 
-  const renderBooks = () => {
-    bookList.map(book => (
-      <Book key={book.id} book={book} />
-    ));
-  };
+  const renderBooks = () => bookList.map(book => (
+    <Book key={book.id} book={book} />
+  ));
 
   return (
     <table>
@@ -22,7 +20,7 @@ const BookList = props => {
         </tr>
       </thead>
       <tbody>
-        {renderBooks}
+        {renderBooks()}
       </tbody>
     </table>
   );
@@ -34,7 +32,7 @@ BookList.propTypes = {
 
 const mapStateToProps = state => (
   {
-    bookList: state,
+    bookList: state.books,
   }
 );
 

@@ -9,16 +9,18 @@ const initialState = [
   {
     title: 'Operating Systems',
     category: 'Learning',
-    id: Math.random(),
+    id: Math.floor((Math.random() * 100)).toString(),
   },
   {
     title: 'The hunger games',
     category: 'Sci-Fi',
-    id: Math.random(),
+    id: Math.floor((Math.random() * 100)).toString(),
   },
 ];
 
-const store = createStore(combinedReducers, initialState);
+const store = createStore(combinedReducers, {
+  books: initialState,
+});
 
 ReactDOM.render(
   <Provider store={store}>
