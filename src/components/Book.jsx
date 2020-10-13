@@ -10,6 +10,12 @@ const Book = (props) => {
     deleteBook(book);
   };
 
+  const handleKeyDown = e => {
+    if (e.keyCode === 13) {
+      deleteBook(book);
+    }
+  };
+
   return (
     <div className="Lesson-Panel">
       <div className="Book-Details">
@@ -22,10 +28,12 @@ const Book = (props) => {
         <span className="Suzanne-Collins">
           Suzanne Collins
         </span>
+        <div className="book-actions">
+          <span className="book-action">Comments</span>
+          <span className="book-action" onClick={handleClick} onKeyDown={handleKeyDown} role="button" tabIndex="0">Remove</span>
+          <span className="book-action">Edit</span>
+        </div>
       </div>
-      <button type="button" onClick={handleClick}>
-        <span className="material-icons">delete</span>
-      </button>
     </div>
 
   );
