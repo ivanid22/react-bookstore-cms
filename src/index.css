@@ -54,6 +54,7 @@ table {
   --black-three: #121212;
   --medium-blue: #307bbe;
   --dodger-blue: #379cf6;
+  --azure: #0290ff;
 }
 
 .Bookstore-CMS {
@@ -182,6 +183,7 @@ table {
   background-position: center;
   background-repeat: no-repeat;
   width: 90px;
+  margin-right: 10px;
   height: 89.9px;
 }
 
@@ -199,13 +201,28 @@ table {
 }
 
 .Book-Stats {
+  padding-right: 100px;
   display: flex;
   align-items: center;
+}
+
+.Chapter-Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  padding-left: 50px;
+}
+
+.Chapter-Info {
+  display: flex;
+  flex-direction: column;
 }
 
 .Completed-Section {
   display: flex;
   align-items: center;
+  border-right: 2px solid #e8e8e8;
 }
 
 .Completed {
@@ -220,4 +237,51 @@ table {
   line-height: normal;
   letter-spacing: normal;
   color: var(--black-three);
+  padding-right: 78px;
+}
+
+.Current-Chapter {
+  text-transform: uppercase;
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.Current-Lesson {
+  width: 75px;
+  height: 21px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-three);
+}
+
+.Update-progress {
+  text-transform: uppercase;
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
