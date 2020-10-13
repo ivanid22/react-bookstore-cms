@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import filterBooks from '../filters/booksFilter';
 
 const FILTEROPTIONS = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -38,7 +39,7 @@ BookList.propTypes = {
 
 const mapStateToProps = state => (
   {
-    bookList: state.books,
+    bookList: filterBooks(state.books, state.filter),
   }
 );
 
