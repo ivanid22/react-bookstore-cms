@@ -34,6 +34,16 @@ const Book = (props) => {
           <span className="book-action">Edit</span>
         </div>
       </div>
+      <div className="Book-Stats">
+        <div className="Completed">
+          <div className="Rectangle-3">
+            <div className="Oval-2" />
+          </div>
+        </div>
+        <div className="current-chapter">
+
+        </div>
+      </div>
     </div>
 
   );
