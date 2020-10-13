@@ -20,6 +20,7 @@ const initialState = [
 
 const store = createStore(combinedReducers, {
   books: initialState,
+  filter: 'All',
 });
 
 ReactDOM.render(

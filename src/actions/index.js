@@ -13,3 +13,8 @@ export const removeBook = book => ({
   type: 'REMOVE_BOOK',
   book,
 });
+
+export const filter = label => ({
+  type: 'CHANGE_FILTER',
+  label,
+});
