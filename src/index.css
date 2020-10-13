@@ -52,6 +52,8 @@ table {
   --white: #fafafa;
   --black-5: rgba(0, 0, 0, 0.05);
   --black-three: #121212;
+  --medium-blue: #307bbe;
+  --dodger-blue: #379cf6;
 }
 
 .Bookstore-CMS {
@@ -176,6 +178,46 @@ table {
 }
 
 .Rectangle-3 {
+  background-image: url('./assets/progress_img.png');
+  background-position: center;
+  background-repeat: no-repeat;
   width: 90px;
   height: 89.9px;
+}
+
+.Percent-Complete {
+  width: 68px;
+  height: 39px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.Book-Stats {
+  display: flex;
+  align-items: center;
+}
+
+.Completed-Section {
+  display: flex;
+  align-items: center;
+}
+
+.Completed {
+  width: 80px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
 }

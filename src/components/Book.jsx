@@ -35,9 +35,11 @@ const Book = (props) => {
         </div>
       </div>
       <div className="Book-Stats">
-        <div className="Completed">
-          <div className="Rectangle-3">
-            <div className="Oval-2" />
+        <div className="Completed-Section">
+          <div className="Rectangle-3" />
+          <div className="completion-details">
+            <p className="Percent-Complete">64%</p>
+            <p className="Completed">Completed</p>
           </div>
         </div>
         <div className="current-chapter">
