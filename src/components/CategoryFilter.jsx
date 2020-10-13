@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import filter from '../actions/index';
+import { filter } from '../actions/index';
 
 const CategoryFilter = props => {
   const { filterOptions, handleFilterChange } = props;
@@ -17,7 +17,8 @@ const CategoryFilter = props => {
   };
 
   return (
-    <label htmlFor="filter">
+    <label htmlFor="filter" className="filter-style">
+      Filter:
       <select id="filter" onChange={handleEventFilterChange}>
         {optionList()}
       </select>

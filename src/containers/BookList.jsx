@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
+
+const FILTEROPTIONS = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const BookList = props => {
   const { bookList } = props;
@@ -11,18 +14,21 @@ const BookList = props => {
   ));
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book Id</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>
-        {renderBooks()}
-      </tbody>
-    </table>
+    <div>
+      <CategoryFilter filterOptions={FILTEROPTIONS} />
+      <table>
+        <thead>
+          <tr>
+            <th>Book Id</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {renderBooks()}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

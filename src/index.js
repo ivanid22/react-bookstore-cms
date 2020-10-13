@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import combinedReducers from './reducers/index';
+import './index.css';
 
 const initialState = [
   {
