@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { removeBook } from "../actions/index";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { removeBook } from '../actions/index';
 
-const Book = (props) => {
+const Book = props => {
   const { book, deleteBook } = props;
 
   const handleClick = () => {

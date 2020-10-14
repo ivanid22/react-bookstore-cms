@@ -18,7 +18,7 @@
 
 .panel-bg {
   margin: 0 auto;
-  width: 1400px;
+  width: 95%;
   padding-bottom: 150px;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 var(--black-5);
@@ -33,7 +33,7 @@
 
 .BookList-Container {
   display: flex;
-  width: 1200px;
+  width: 85.5%;
   margin: auto;
   flex-direction: column;
   justify-content: space-between;
@@ -242,7 +242,7 @@
 }
 
 .Book-form {
-  width: 1200px;
+  width: 85.5%;
   margin: 25px auto;
   border-top: 1px solid #e8e8e8;
   padding-top: 20px;
@@ -318,7 +318,7 @@
 }
 
 .Navbar {
-  width: 1400px;
+  width: 100%;
   height: 95px;
   background-color: #fff;
   margin-bottom: 40px;
@@ -381,4 +381,89 @@
 
 #filter {
   margin-left: 10px;
+}
+
+.Book-form-input-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .Book-Stats {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .book-action {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+
+  .Rectangle-3 {
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+  }
+
+  .Percent-Complete {
+    font-size: 25px;
+    margin-right: 2px;
+  }
+
+  .Completed {
+    font-size: 10px;
+    padding-right: 0;
+  }
+
+  .Chapter-Section {
+    padding-left: 3px;
+  }
+
+  .Update-progress {
+    width: 100%;
+    font-size: 10px;
+    height: 25px;
+  }
+
+  .Current-Chapter,
+  .Current-Lesson {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .title {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .Suzanne-Collins {
+    width: auto;
+    font-size: 10px;
+  }
+
+  .Completed-Section {
+    margin-right: 15px;
+  }
+
+  .Lesson-Panel {
+    margin-bottom: 10px;
+  }
+
+  .Book-form-title-input {
+    width: 45%;
+    margin-right: 10px;
+  }
+
+  .Book-form-category-input {
+    width: 20%;
+    margin-right: 10px;
+  }
+
+  .Book-form-submit {
+    width: 25%;
+    float: right;
+  }
 }
