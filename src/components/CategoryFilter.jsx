@@ -19,7 +19,7 @@ const CategoryFilter = props => {
   return (
     <label htmlFor="filter" className="filter-style">
       Filter:
-      <select id="filter" onChange={handleEventFilterChange}>
+      <select id="filter" className="Book-form-category-input" onChange={handleEventFilterChange}>
         {optionList()}
       </select>
     </label>

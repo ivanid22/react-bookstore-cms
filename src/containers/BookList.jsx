@@ -16,8 +16,8 @@ const BookList = props => {
 
   return (
     <div className="BookList-Container">
-      <CategoryFilter filterOptions={FILTEROPTIONS} />
       {renderBooks()}
+      <CategoryFilter filterOptions={FILTEROPTIONS} />
     </div>
   );
 };
