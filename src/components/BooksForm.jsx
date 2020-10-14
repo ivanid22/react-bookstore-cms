@@ -74,6 +74,6 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-const connectedBooksForm = connect(null, mapDispatchToProps)(BooksForm);
+const ConnectedBooksForm = connect(null, mapDispatchToProps)(BooksForm);
 
-export default connectedBooksForm;
+export default ConnectedBooksForm;

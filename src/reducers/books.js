@@ -7,8 +7,8 @@ const booksReducer = (state = [], action) => {
       ];
     case 'REMOVE_BOOK':
       return [
-        ...state.slice(0, state.indexOf[action.book]),
-        ...state.slice(state.indexOf[action.book] + 1),
+        ...state.slice(0, state.indexOf(action.book)),
+        ...state.slice(state.indexOf(action.book) + 1),
       ];
     default:
       return state;
