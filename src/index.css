@@ -19,6 +19,7 @@
 .panel-bg {
   margin: 0 auto;
   width: 95%;
+  max-width: 1400px;
   padding-bottom: 150px;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 var(--black-5);
@@ -394,9 +395,32 @@
   .Book-Stats {
     padding-right: 0;
   }
+
+  .Navbar {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .Navbar-title {
+    font-size: 22.5px;
+    height: auto;
+  }
+
+  .BOOKS {
+    font-size: 11px;
+    margin-left: 30px;
+  }
 }
 
 @media (max-width: 980px) {
+  label {
+    font-size: 12px;
+  }
+
+  .panel-bg {
+    padding-bottom: 100px;
+  }
+
   .book-action {
     font-size: 10px;
     padding: 0 10px;
@@ -449,21 +473,38 @@
   }
 
   .Lesson-Panel {
+    height: 125px;
     margin-bottom: 10px;
   }
 
   .Book-form-title-input {
     width: 45%;
     margin-right: 10px;
+    font-size: 12px;
+    padding: 9px 0 9px 13px;
+  }
+
+  .Book-form-title {
+    font-size: 15px;
+    margin-bottom: 8px;
   }
 
   .Book-form-category-input {
     width: 20%;
     margin-right: 10px;
+    height: auto;
+    font-size: 12px;
+    padding: 9px 0 9px 13px;
   }
 
   .Book-form-submit {
     width: 25%;
     float: right;
+    font-size: 11px;
+    height: 36px;
+  }
+
+  .book-actions {
+    margin: 0;
   }
 }
