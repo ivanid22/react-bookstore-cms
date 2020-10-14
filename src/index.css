@@ -90,14 +90,14 @@ table {
 }
 
 .Lesson-Panel {
-  width: 1200px;
-  padding: 32px 27px;
+  margin-bottom: 15px;
+  padding: 32px 27px 10px;
   display: flex;
   justify-content: space-between;
   height: 170px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .School-of {
@@ -112,6 +112,8 @@ table {
   line-height: normal;
   letter-spacing: normal;
   color: var(--black-three);
+  margin: 0 0 10px;
+  display: inline-block;
 }
 
 .title {
@@ -138,6 +140,8 @@ table {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  display: inline-block;
+  margin: 0 0 20px;
 }
 
 .book-action {
@@ -284,4 +288,84 @@ table {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+}
+
+.Book-form {
+  width: 1200px;
+  margin: 25px auto;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 20px;
+}
+
+.Book-form-title {
+  width: 174px;
+  height: 24px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
+
+.Book-form-title-input {
+  width: 644px;
+  height: 19px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin-right: 34px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  padding: 13px 0 13px 17px;
+}
+
+.Book-form-category-input {
+  width: 285px;
+  height: 48px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  padding: 11px 0 11px 17px;
+  margin-right: 34px;
+}
+
+.Book-form-submit {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+  text-transform: uppercase;
+}
+
+.Rectangle-2 {
+
 }
