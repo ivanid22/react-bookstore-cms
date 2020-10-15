@@ -51,7 +51,6 @@ const Book = props => {
         </div>
       </div>
     </div>
-
   );
 };
 
@@ -60,8 +59,8 @@ Book.propTypes = {
   deleteBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  deleteBook: (book) => {
+const mapDispatchToProps = dispatch => ({
+  deleteBook: book => {
     dispatch(removeBook(book));
   },
 });

@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
-
-const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+import CATEGORIES from '../constants/constants';
 
 const renderCategories = () => (
   CATEGORIES.map(category => (
