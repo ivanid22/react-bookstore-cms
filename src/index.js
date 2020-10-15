@@ -1,9 +1,11 @@
 import React from 'react';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import combinedReducers from './reducers/index';
+import { createBookAsync, fetchBooksAsync } from './actions/index';
 import './reset.css';
 import './index.css';
 
@@ -21,9 +23,11 @@ const initialState = [
 ];
 
 const store = createStore(combinedReducers, {
-  books: initialState,
+  books: [],
   filter: 'All',
-});
+}, applyMiddleware(thunk));
+
+store.dispatch(fetchBooksAsync());
 
 ReactDOM.render(
   <Provider store={store}>
