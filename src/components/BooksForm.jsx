@@ -17,7 +17,7 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      category: '',
+      category: CATEGORIES[0],
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);

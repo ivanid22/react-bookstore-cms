@@ -19,7 +19,7 @@ const BookList = ({ bookList, filter }) => {
   return (
     <div className="BookList-Container">
       {renderBooks()}
-      <CategoryFilter filterOptions={FILTEROPTIONS} />
+      <CategoryFilter filterOptions={FILTEROPTIONS} handleFilterChange={handleFilterChange} />
     </div>
   );
 };
