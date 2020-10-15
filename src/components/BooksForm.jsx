@@ -17,7 +17,7 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      category: CATEGORIES[0],
+      category: '',
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -46,18 +46,15 @@ class BooksForm extends React.Component {
   render() {
     const { category, title } = this.state;
     return (
-      <form onSubmit={this.onSubmit}>
-        <label htmlFor="bookName">
-          Book name
-          <input type="text" id="bookName" value={title} onChange={this.handleNameChange} required />
-        </label>
-        <label htmlFor="bookCategory">
-          Book category
-          <select id="bookCategory" value={category} onChange={this.handleCategoryChange} required>
+      <form onSubmit={this.onSubmit} className="Book-form">
+        <p className="Book-form-title">Add new Book</p>
+        <div className="Book-form-input-container">
+          <input className="Book-form-title-input" type="text" id="bookName" value={title} onChange={this.handleNameChange} required placeholder="Book title" />
+          <select className="Book-form-category-input" id="bookCategory" value={category} onChange={this.handleCategoryChange} required>
             { renderCategories() }
           </select>
-        </label>
-        <input type="submit" />
+          <input className="Book-form-submit" type="submit" value="Add book" />
+        </div>
       </form>
     );
   }

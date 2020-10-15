@@ -17,20 +17,9 @@ const BookList = ({ bookList, filter }) => {
   const handleFilterChange = event => filter(event.target.value);
 
   return (
-    <div>
-      <CategoryFilter filterOptions={FILTEROPTIONS} handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book Id</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {renderBooks()}
-        </tbody>
-      </table>
+    <div className="BookList-Container">
+      {renderBooks()}
+      <CategoryFilter filterOptions={FILTEROPTIONS} />
     </div>
   );
 };

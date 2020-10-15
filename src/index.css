@@ -1,8 +1,510 @@
-body {
-  font-size: 1em;
+:root {
+  --pale-grey: #f5f6fa;
+  --white: #fafafa;
+  --black-5: rgba(0, 0, 0, 0.05);
+  --black-three: #121212;
+  --medium-blue: #307bbe;
+  --dodger-blue: #379cf6;
+  --azure: #0290ff;
+}
+
+.Bookstore-CMS {
+  padding-top: 149px;
+  width: 100%;
+  padding-bottom: 50px;
+  background-color: var(--pale-grey);
+  font-family: 'Roboto Slab', serif;
+}
+
+.panel-bg {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1400px;
+  padding-bottom: 150px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: var(--white);
+  font-family: 'Roboto Slab', serif;
 }
 
 .filter-style {
   display: flex;
   align-items: center;
+}
+
+.BookList-Container {
+  display: flex;
+  width: 85.5%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.Lesson-Panel {
+  margin-bottom: 15px;
+  padding: 32px 27px 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.School-of {
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Montserrat', serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+  margin: 0 0 10px;
+  display: inline-block;
+}
+
+.title {
+  width: 197px;
+  height: 29px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-three);
+}
+
+.Suzanne-Collins {
+  width: 107px;
+  height: 19px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  display: inline-block;
+  margin: 0 0 20px;
+}
+
+.book-action {
+  width: 54px;
+  height: 19px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background-color: transparent;
+  border: none;
+  border-right: solid 2px #e8e8e8;
+  padding: 0 34px;
+}
+
+.book-action:first-child {
+  padding-left: 0;
+}
+
+.book-action:last-child {
+  border-right: none;
+}
+
+.book-actions {
+  margin: 25px 0;
+}
+
+.Oval-2 {
+  width: 68px;
+  height: 68px;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), var(--dodger-blue));
+  border-image-slice: 1;
+}
+
+.Rectangle-3 {
+  background-image: url('./assets/progress_img.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90px;
+  margin-right: 10px;
+  height: 89.9px;
+}
+
+.Percent-Complete {
+  width: 68px;
+  height: 39px;
+  font-family: 'Montserrat', serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.Book-Stats {
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.Chapter-Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  padding-left: 50px;
+}
+
+.Chapter-Info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Completed-Section {
+  display: flex;
+  align-items: center;
+  border-right: 2px solid #e8e8e8;
+}
+
+.Completed {
+  width: 80px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Montserrat', serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+  padding-right: 78px;
+}
+
+.Current-Chapter {
+  text-transform: uppercase;
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-three);
+}
+
+.Current-Lesson {
+  width: 75px;
+  height: 21px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-three);
+}
+
+.Update-progress {
+  text-transform: uppercase;
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.Book-form {
+  width: 85.5%;
+  margin: 25px auto;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 20px;
+}
+
+.Book-form-title {
+  width: 175px;
+  height: 24px;
+  font-family: 'Montserrat', serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
+
+.Book-form-title-input {
+  width: 644px;
+  height: 19px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin-right: 34px;
+  font-family: 'Montserrat', serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  padding: 13px 0 13px 17px;
+}
+
+.Book-form-category-input {
+  width: 285px;
+  height: 48px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: 'Montserrat', serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  padding: 11px 0 11px 17px;
+  margin-right: 34px;
+}
+
+.Book-form-submit {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+  text-transform: uppercase;
+}
+
+.Navbar {
+  width: 100%;
+  height: 95px;
+  background-color: #fff;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.Navbar-content {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar-title {
+  width: 240px;
+  height: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
+}
+
+.BOOKS {
+  width: 59px;
+  height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-three);
+  text-transform: uppercase;
+  margin-left: 42px;
+}
+
+.BOOKS:last-child {
+  opacity: 0.5;
+}
+
+.Navbar-user {
+  height: 45px;
+  width: 45px;
+  background-image: url('./assets/user.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#filter {
+  margin-left: 10px;
+}
+
+.Book-form-input-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .Book-Stats {
+    padding-right: 0;
+  }
+
+  .Navbar {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .Navbar-title {
+    font-size: 22.5px;
+    height: auto;
+  }
+
+  .BOOKS {
+    font-size: 11px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 980px) {
+  label {
+    font-size: 12px;
+  }
+
+  .panel-bg {
+    padding-bottom: 100px;
+  }
+
+  .book-action {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+
+  .Rectangle-3 {
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+  }
+
+  .Percent-Complete {
+    font-size: 25px;
+    margin-right: 2px;
+  }
+
+  .Completed {
+    font-size: 10px;
+    padding-right: 0;
+  }
+
+  .Chapter-Section {
+    padding-left: 3px;
+  }
+
+  .Update-progress {
+    width: 100%;
+    font-size: 10px;
+    height: 25px;
+  }
+
+  .Current-Chapter,
+  .Current-Lesson {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .title {
+    width: auto;
+    font-size: 15px;
+  }
+
+  .Suzanne-Collins {
+    width: auto;
+    font-size: 10px;
+  }
+
+  .Completed-Section {
+    margin-right: 15px;
+  }
+
+  .Lesson-Panel {
+    height: 125px;
+    margin-bottom: 10px;
+  }
+
+  .Book-form-title-input {
+    width: 45%;
+    margin-right: 10px;
+    font-size: 12px;
+    padding: 9px 0 9px 13px;
+  }
+
+  .Book-form-title {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .Book-form-category-input {
+    width: 20%;
+    margin-right: 10px;
+    height: auto;
+    font-size: 12px;
+    padding: 9px 0 9px 13px;
+  }
+
+  .Book-form-submit {
+    width: 25%;
+    float: right;
+    font-size: 11px;
+    height: 36px;
+  }
+
+  .book-actions {
+    margin: 0;
+  }
 }
