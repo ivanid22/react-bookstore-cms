@@ -27,6 +27,10 @@ const store = createStore(combinedReducers, {
   filter: 'All',
 }, applyMiddleware(thunk));
 
+store.subscribe(() => {
+  console.log('state updated', store.getState());
+})
+
 store.dispatch(fetchBooksAsync());
 
 ReactDOM.render(

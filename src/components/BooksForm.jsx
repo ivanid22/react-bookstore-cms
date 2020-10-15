@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createBook } from '../actions/index';
+import { createBook, createBookAsync } from '../actions/index';
 import CATEGORIES from '../constants/constants';
 
 const renderCategories = () => (
@@ -66,7 +66,7 @@ BooksForm.propTypes = {
 
 const mapDispatchToProps = dispatch => ({
   createBook: bookData => {
-    dispatch(createBook(bookData));
+    dispatch(createBookAsync(bookData));
   },
 });
 

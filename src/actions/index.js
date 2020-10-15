@@ -43,10 +43,20 @@ export const fetchBooksAsync = () => {
   };
 };
 
-export const createBookAsync = ({ category, title }) => {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(createBook({ category, title }));
-    }, 3000);
-  };
-};
+export const createBookAsync = ({ category, title }) => (dispatch => {
+  axios({
+    method: 'POST',
+    url: `${API_URL}/books`,
+    headers: {
+      Accept: 'application/json',
+    },
+    data: {
+      category,
+      title,
+    },
+  }).then(() => {
+    dispatch(createBook({ category, title }));
+  }).catch(error => {
+    console.log(error.message);
+  });
+});
